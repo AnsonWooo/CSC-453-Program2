@@ -1,0 +1,3 @@
+Anson Wu and Tommy Pho
+
+1. The response time should increase because when the quantum increases, its approaching the same approach as a FCFS approach. If we had a smaller quantum slice, then processes can start sooner which means lower response time.
