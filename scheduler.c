@@ -395,6 +395,16 @@
      //
      // Hint: processes[i].arrival_time == current_time indicates a process has just arrived
      *arrival_count = 0; // Initialize arrival count
+     
+     for (int i = 0; i < process_count; i++) {
+         if (processes[i].arrival_time == current_time) {
+             if (algorithm == RR || algorithm == SRTF) {
+                 processes[i].state = READY;
+             }
+         }
+         arrived_indices[*arrival_count] = i;
+         (*arrival_count)++;
+     }
  }
  
  /**
@@ -414,6 +424,8 @@
      //
      // Note: The current_time parameter is not used but kept for API consistency
      (void)current_time; // Explicitly mark as unused
+
+      
  }
  
  /**
